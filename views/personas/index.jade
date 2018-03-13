@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    table
+        thead
+           tr: th Nombre 
+            th Telefono
+            th
+                a(href="/personas/buscar/") Buscar
+        tbody
+        - each persona in personas
+            tr
+                td
+                    =persona.nombre
+                td
+                    =persona.telefono
+                td
+                    a(href="/personas/actualizar/#{persona.telefono}") Editar
+                td
+                    a(href="/personas/eliminar/#{persona.telefono}") Eliminar
+    p
+        a(href="/personas/agregar/") Agregar

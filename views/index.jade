@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1.
+      Iniciar Sesion
+  form#contact(name="iniciarSesion", method="post", action="/personas/iniciarSesion/")
+      p Usuario:
+          input#inputNombre(type="text", placeholder="Ejem. Javier", name="usuario")
+      p Contraseña:
+          input#inputNombre(type="text", name="contra")
+      p
+          button#btnEnviar(type="submit") Buscar

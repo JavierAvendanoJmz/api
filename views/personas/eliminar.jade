@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    form#contact(name="eliminarPersona", method="post", action="/personas/eliminar/#{persona.telefono}")
+        p Nombre:
+            input#inputNombre(type="text", placeholder="Ejem. Javier", name="nombre", value="#{persona.nombre}")
+        p Telefono:
+            input#inputTelefono(type="text", placeholder="Ejem. 9515093153", name="telefono", value="#{persona.telefono}")
+        p
+            button#btnEnviar(type="submit") Eliminar
+
